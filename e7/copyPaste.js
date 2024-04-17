@@ -179,7 +179,8 @@ function showMeta() {
                 return;
             }
 
-            defenses.sort((a, b) => (b.w+b.l) - (a.w+a.l))
+            //defenses.sort((a, b) => (b.w+b.l) - (a.w+a.l))
+            defenses.sort((a, b) => (b.w/(b.w+b.d+b.l)) - (a.w/(a.w+a.d+a.l)))
             offenses.sort((a, b) => (b[1].w+b[1].l) - (a[1].w+a[1].l))
 
             var html = "</br></br><h2>Top 50 most common meta defenses in past 4 weeks</h2>";
